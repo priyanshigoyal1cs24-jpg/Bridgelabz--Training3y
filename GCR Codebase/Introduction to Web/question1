@@ -1,0 +1,29 @@
+1. Frontend, Backend and Full-Stack Development
+Frontend Development
+
+Frontend is the part of a website that users can see and interact with.
+
+Technologies: HTML, CSS, JavaScript, React, etc.
+
+Example:
+On an online shopping website, the product images, buttons, search bar, menus, and product pages are frontend.
+
+Backend Development
+
+Backend is the server-side part of a website. It handles logic, authentication, requests, and communication with databases.
+
+Technologies: Java, Python, Node.js, PHP, etc.
+
+Example:
+When you click "Place Order", the backend processes the order and stores the information.
+
+Full-Stack Development
+
+A full-stack developer works with both frontend and backend, and often databases/APIs as well.
+
+Example:
+For an online shopping website:
+
+Frontend → Product page and shopping cart
+Backend → Order processing
+Database → Customer and product information

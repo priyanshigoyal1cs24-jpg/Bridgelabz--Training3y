@@ -1,0 +1,7 @@
+8. Static vs Dynamic Websites
+Static Website	Dynamic Website
+Content generally stays fixed	Content can change based on user/data
+Usually uses HTML/CSS	Can use backend + database
+Simple and fast	More interactive
+No database is necessarily required	Often uses a database
+Easy to host	Requires more server-side setup

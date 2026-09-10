@@ -1,0 +1,26 @@
+A rendering engine converts HTML, CSS and other web resources into the visual webpage displayed by the browser.
+
+Browser	Rendering Engine
+Google Chrome	Blink
+Microsoft Edge	Blink
+Mozilla Firefox	Gecko
+Safari	WebKit
+Opera	Blink
+Difference
+
+Blink
+
+Used by Chrome, Edge, Opera and many Chromium-based browsers.
+Developed as part of the Chromium project.
+
+Gecko
+
+Used by Firefox.
+Developed by Mozilla.
+
+WebKit
+
+Used by Safari.
+Developed by Apple and the WebKit community.
+
+Different rendering engines may interpret some newer or unusual web features differently, so developers test websites across multiple browsers.

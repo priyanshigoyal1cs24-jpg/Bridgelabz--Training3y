@@ -1,0 +1,39 @@
+Step 1: Download VS Code
+
+Go to the official Visual Studio Code website and download the Windows version.
+
+Step 2: Install
+Open the downloaded installer.
+Accept the agreement.
+Click Next.
+Select installation options.
+Click Install.
+Open VS Code.
+Step 3: Create a Project
+
+Create a folder:WebDevelopment
+WebDevelopment
+│
+├── index.html
+├── style.css
+└── script.js
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Hello World</h1>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+h1 {
+    color: blue;
+}
+
+console.log("Hello World");

@@ -1,0 +1,19 @@
+        CLIENT
+     (Web Browser)
+           |
+           | HTTP Request
+           ↓
+     +-------------+
+     | Web Server  |
+     +-------------+
+           |
+           | Process Request
+           ↓
+     +-------------+
+     |  Response   |
+     +-------------+
+           |
+           | HTTP Response
+           ↓
+        CLIENT
+     (Web Browser)

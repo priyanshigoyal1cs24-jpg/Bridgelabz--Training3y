@@ -1,0 +1,21 @@
+4. Tools Required for Web Development
+Tool	Purpose
+VS Code	Writing and editing code
+Web Browser	Running and testing websites
+HTML	Creating webpage structure
+CSS	Styling webpages
+JavaScript	Adding functionality and interaction
+Git	Version control
+GitHub	Storing and sharing code online
+Node.js	Running JavaScript outside the browser and developing backend applications
+npm	Installing and managing JavaScript packages
+
+Computer
+   ↓
+VS Code
+   ↓
+HTML + CSS + JavaScript
+   ↓
+Browser
+   ↓
+Test Website

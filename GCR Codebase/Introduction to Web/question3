@@ -1,0 +1,26 @@
+3. How a Browser Requests and Displays a Web Page
+
+When a user enters a website address in a browser:
+
+User enters the URL.
+Browser finds the server's IP address using DNS.
+Browser sends an HTTP/HTTPS request to the server.
+Web server receives the request.
+Server sends files such as HTML, CSS, JavaScript, and images.
+Browser receives these files.
+Browser creates the webpage structure from HTML.
+CSS is applied for styling.
+JavaScript is executed when required.
+Browser renders and displays the webpage.
+
+URL
+ ↓
+DNS
+ ↓
+Web Server
+ ↓
+HTML + CSS + JS + Images
+ ↓
+Browser
+ ↓
+Rendered Web Page
