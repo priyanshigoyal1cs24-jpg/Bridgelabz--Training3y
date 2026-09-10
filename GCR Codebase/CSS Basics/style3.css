@@ -1,0 +1,184 @@
+/* Remove default browser spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f1f5f9;
+
+    color: #172033;
+}
+
+
+/* Main container */
+.team-container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 0;
+
+    text-align: center;
+}
+
+
+/* Main heading */
+.team-container h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* Subtitle */
+.subtitle {
+    font-size: 1.1rem;
+
+    color: #64748b;
+
+    margin-bottom: 40px;
+}
+
+
+/* 
+   Flexbox is used to place
+   all three cards in one row.
+*/
+.team {
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+
+    align-items: stretch;
+}
+
+
+/* Individual card */
+.card {
+
+    /* Equal width for all cards */
+    flex: 1;
+
+    /* Box Model: padding */
+    padding: 30px;
+
+    /* Box Model: margin */
+    margin: 10px;
+
+    background-color: white;
+
+    /* Border */
+    border: 2px solid #cbd5e1;
+
+    /* Rounded corners */
+    border-radius: 16px;
+
+    /* Shadow effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    /* Smooth transition */
+    transition: transform 0.3s;
+}
+
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Icon */
+.icon {
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* Member name */
+.card h2 {
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* Member role */
+.card h3 {
+    color: #475569;
+
+    font-size: 1rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+.card p {
+    line-height: 1.7;
+
+    color: #475569;
+}
+
+
+/*
+   Special styling for
+   the Team Lead card.
+*/
+.team-lead {
+
+    background-color: #dbeafe;
+
+    /* Different border style */
+    border: 3px dashed #2563eb;
+
+    /* Slightly larger */
+    transform: scale(1.02);
+}
+
+
+/* Team lead hover */
+.team-lead:hover {
+    transform: scale(1.05);
+}
+
+
+/* 
+   Responsive layout:
+   Below 600px all cards
+   become one column.
+*/
+@media (max-width: 600px) {
+
+    .team {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+
+        margin: 10px 0;
+    }
+
+    .team-lead {
+        transform: none;
+    }
+
+    .team-lead:hover {
+        transform: translateY(-8px);
+    }
+
+    .team-container h1 {
+        font-size: 2rem;
+    }
+}

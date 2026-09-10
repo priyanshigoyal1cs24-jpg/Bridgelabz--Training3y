@@ -1,0 +1,195 @@
+/* Remove default browser spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7ed;
+    color: #332211;
+}
+
+/* Header */
+header {
+    padding: 40px;
+    text-align: center;
+
+    background-color: #7c2d12;
+    color: white;
+
+    border-bottom: 5px solid #ea580c;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #431407;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin: 0 20px;
+
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fed7aa;
+}
+
+/* Common styling for all sections */
+section {
+    width: 100%;
+    min-height: 70vh;
+
+    padding: 100px 10%;
+
+    border-bottom: 8px solid #fff7ed;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 750px;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------
+   SECTION 1
+   Background image + fixed attachment
+   --------------------------------- */
+
+.about-section {
+    background-image:
+        url("https://picsum.photos/1400/800?random=11");
+
+    background-size: cover;
+    background-position: center;
+
+    /* Parallax-like effect */
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* ---------------------------------
+   SECTION 2
+   Linear Gradient
+   --------------------------------- */
+
+.culture-section {
+    background: linear-gradient(
+        135deg,
+        #fed7aa,
+        #fb923c,
+        #9a3412
+    );
+
+    color: white;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------
+   SECTION 3
+   Background image + fixed attachment
+   --------------------------------- */
+
+.places-section {
+    background-image:
+        url("https://picsum.photos/1400/800?random=22");
+
+    background-size: cover;
+    background-position: center;
+
+    /* Second section with fixed background */
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* ---------------------------------
+   SECTION 4
+   Radial Gradient
+   --------------------------------- */
+
+.travel-section {
+    background: radial-gradient(
+        circle,
+        #fef3c7,
+        #f59e0b,
+        #92400e
+    );
+
+    color: #211307;
+
+    margin: 0;
+}
+
+
+/* Footer */
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #431407;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 12px;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+}
