@@ -1,0 +1,54 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="question1.css">
+</head>
+<body>
+
+<header>
+    <h1>Pseudo-Classes Demonstration</h1>
+</header>
+
+<main class="examples">
+
+    <section>
+        <h2>:hover</h2>
+        <a href="#">Hover over this link</a>
+        <p>Changes style when the mouse is placed over it.</p>
+    </section>
+
+    <section>
+        <h2>:focus</h2>
+        <button>Click or focus this button</button>
+        <p>Applies a style when the element gets focus.</p>
+    </section>
+
+    <section>
+        <h2>:active</h2>
+        <button>Press this button</button>
+        <p>Applies a style while the button is being pressed.</p>
+    </section>
+
+    <section>
+        <h2>:nth-child()</h2>
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ul>
+        <p>Styles a specific child element.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Assignment 8 - Question 1</p>
+</footer>
+
+</body>
+</html>
+```

@@ -1,0 +1,76 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f6f8;
+}
+
+header, footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.buttons {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #aaa;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+.secondary {
+    background: #555;
+    color: white;
+    border: none;
+}
+
+.outline {
+    background: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.disabled {
+    background: #ccc;
+    border: none;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: 3px solid orange;
+}
+
+button:disabled {
+    opacity: 0.6;
+}
+```

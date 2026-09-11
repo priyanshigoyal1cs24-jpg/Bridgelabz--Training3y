@@ -1,0 +1,67 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #fce7f3);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 400px;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px #aaa;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #3498db;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #217dbb;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+}
+```

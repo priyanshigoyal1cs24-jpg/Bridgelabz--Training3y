@@ -1,0 +1,52 @@
+```css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+header, footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.comparison {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.box {
+    width: 350px;
+    padding: 30px;
+    border: 10px solid;
+    border-radius: 10px;
+}
+
+.default-box {
+    box-sizing: content-box;
+    background: #d5f5e3;
+    border-color: green;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background: #d6eaf8;
+    border-color: blue;
+}
+
+@media (max-width: 700px) {
+    .comparison {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
+```
