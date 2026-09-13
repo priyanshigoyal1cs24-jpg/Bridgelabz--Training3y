@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.animation-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.box {
+    padding: 20px;
+    background: #3498db;
+    color: white;
+    animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+.ball {
+    width: 70px;
+    height: 70px;
+    background: #e74c3c;
+    border-radius: 50%;
+    animation: bounce 1s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+h1 {
+    animation: colorChange 3s ease-in-out infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveBox {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(-40px);
+    }
+
+    to {
+        transform: translateY(40px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: blue;
+    }
+
+    50% {
+        color: red;
+    }
+
+    100% {
+        color: green;
+    }
+}

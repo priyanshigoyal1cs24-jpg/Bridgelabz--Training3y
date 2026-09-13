@@ -1,0 +1,65 @@
+/* Element selector */
+p {
+    font-size: 18px;
+}
+
+/* Class selector */
+.highlight {
+    color: blue;
+    font-weight: bold;
+}
+
+/* ID selector */
+#special {
+    color: red;
+    font-size: 22px;
+}
+
+/* Attribute selector */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid green;
+}
+
+/* Child combinator */
+.parent > p {
+    background: lightblue;
+}
+
+/* Descendant combinator */
+.parent p {
+    padding: 8px;
+}
+
+/* Adjacent sibling */
+ul + .after {
+    color: purple;
+}
+
+/* General sibling */
+ul ~ .sibling {
+    color: orange;
+}
+
+/* Element selector for links */
+a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+main {
+    padding: 40px;
+    min-height: 70vh;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
