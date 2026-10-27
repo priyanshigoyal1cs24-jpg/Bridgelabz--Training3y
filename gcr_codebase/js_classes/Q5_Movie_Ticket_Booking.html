@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Movie Ticket Booking</title>
+<style>body{font-family:Arial,sans-serif;max-width:440px;margin:30px auto;padding:16px}input,button{box-sizing:border-box;width:100%;padding:10px;margin:7px 0}.error{color:red}.ticket{background:#f2f2f2;padding:14px;margin-top:15px}</style></head><body>
+<h2>Movie Ticket Booking</h2><form id="bookingForm" novalidate>
+<label>Name</label><input id="name" type="text"><label>Email</label><input id="email" type="text"><label>Seats (1–10)</label><input id="seats" type="number" min="1" max="10"><button type="submit">Book Ticket</button>
+</form><p id="message" class="error"></p><div id="ticket" class="ticket"></div>
+<script>
+document.getElementById("bookingForm").addEventListener("submit",event=>{
+ event.preventDefault();
+ const name=document.getElementById("name").value.trim(),email=document.getElementById("email").value.trim(),seats=Number(document.getElementById("seats").value),errors=[];
+ if(!/^[A-Za-z ]+$/.test(name))errors.push("Name must contain alphabets only.");
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))errors.push("Enter a valid email.");
+ if(!Number.isInteger(seats)||seats<1||seats>10)errors.push("Seats must be a number from 1 to 10.");
+ document.getElementById("message").textContent=errors.join(" ");
+ const ticketElement=document.getElementById("ticket");
+ if(errors.length===0){const booking={name,email,seats};ticketElement.textContent=`Booking Confirmed | Name: ${booking.name} | Email: ${booking.email} | Seats: ${booking.seats}`;}else{ticketElement.textContent="";}
+});
+</script></body></html>

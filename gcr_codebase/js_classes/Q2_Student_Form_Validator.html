@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Student Form Validator</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:440px;margin:30px auto;padding:16px}input,button{box-sizing:border-box;width:100%;padding:10px;margin:7px 0}.valid{border:2px solid green}.invalid{border:2px solid red}.error{color:red;font-size:13px;min-height:16px}
+</style></head><body>
+<h2>Student Registration</h2>
+<form id="studentForm" novalidate>
+<label>Name</label><input id="name" type="text"><div class="error" id="nameError"></div>
+<label>Email</label><input id="email" type="text"><div class="error" id="emailError"></div>
+<label>Phone</label><input id="phone" type="text"><div class="error" id="phoneError"></div>
+<label>Password</label><input id="password" type="password"><div class="error" id="passwordError"></div>
+<button type="submit">Register</button></form><p id="result"></p>
+<script>
+const rules = {
+ name:{regex:/^[A-Za-z]+$/,message:"Name must contain alphabets only."},
+ email:{regex:/^[^\s@]+@[^\s@]+\.[^\s@]+$/,message:"Enter a valid email address."},
+ phone:{regex:/^\d{10}$/,message:"Phone must contain exactly 10 digits."},
+ password:{regex:/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/,message:"Password needs an uppercase letter, a number, and a special character."}
+};
+function validateField(id){
+ const input=document.getElementById(id), error=document.getElementById(id+"Error");
+ const valid=rules[id].regex.test(input.value.trim());
+ input.className=valid?"valid":"invalid"; error.textContent=valid?"":rules[id].message; return valid;
+}
+Object.keys(rules).forEach(id=>document.getElementById(id).addEventListener("input",()=>validateField(id)));
+document.getElementById("studentForm").addEventListener("submit",event=>{
+ event.preventDefault(); const valid=Object.keys(rules).map(validateField).every(Boolean);
+ document.getElementById("result").textContent=valid?"Registration successful!":"Please correct the highlighted fields.";
+});
+</script></body></html>

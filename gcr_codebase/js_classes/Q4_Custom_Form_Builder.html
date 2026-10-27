@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Custom Form Builder</title>
+<style>body{font-family:Arial,sans-serif;max-width:500px;margin:30px auto;padding:16px}label{display:block;margin-top:12px}input,select,button{padding:9px;width:100%;box-sizing:border-box;margin-top:5px}pre{background:#f3f3f3;padding:12px;white-space:pre-wrap}</style></head><body>
+<h2>Dynamic Form Builder</h2><div id="formContainer"></div><pre id="output"></pre>
+<script>
+class FormBuilder {
+ constructor(fields,containerId){this.fields=fields;this.container=document.getElementById(containerId);}
+ buildForm(){
+  const fieldsHTML=this.fields.map((field,index)=>{
+   const fieldId=`field${index}`;
+   if(field.type==="select"){const options=field.options.map(option=>`<option value="${option}">${option}</option>`).join("");return `<label for="${fieldId}">${field.label}</label><select id="${fieldId}" name="${field.name}">${options}</select>`;}
+   return `<label for="${fieldId}">${field.label}</label><input id="${fieldId}" name="${field.name}" type="${field.type}">`;
+  }).join("");
+  this.container.innerHTML=`<form id="dynamicForm">${fieldsHTML}<button type="submit">Submit</button></form>`;
+  document.getElementById("dynamicForm").addEventListener("submit",event=>{event.preventDefault();document.getElementById("output").textContent=JSON.stringify(this.getFormData(),null,2);});
+ }
+ getFormData(){const formData={};this.fields.forEach((field,index)=>formData[field.name]=document.getElementById(`field${index}`).value);return formData;}
+}
+const fields=[
+ {type:"text",label:"Username",name:"username"},
+ {type:"email",label:"Email",name:"email"},
+ {type:"password",label:"Password",name:"password"},
+ {type:"select",label:"Course",name:"course",options:["JavaScript","Java","Python"]}
+];
+new FormBuilder(fields,"formContainer").buildForm();
+</script></body></html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dynamic Object Updater</title>
+<style>body{font-family:Arial,sans-serif;max-width:440px;margin:30px auto;padding:16px}input,button{box-sizing:border-box;width:100%;padding:10px;margin:7px 0}pre{background:#f2f2f2;padding:12px}</style></head><body>
+<h2>Edit User</h2><form id="userForm"><label>Name</label><input id="name" required><label>Email</label><input id="email" type="email" required><label>Age</label><input id="age" type="number" min="1" required><button type="submit">Update User</button></form>
+<h3>Updated User Object</h3><pre id="output"></pre>
+<script>
+const user={name:"John",email:"john@mail.com",age:21};
+document.getElementById("name").value=user.name;document.getElementById("email").value=user.email;document.getElementById("age").value=user.age;
+document.getElementById("output").textContent=JSON.stringify(user,null,2);
+document.getElementById("userForm").addEventListener("submit",event=>{
+ event.preventDefault();user.name=document.getElementById("name").value.trim();user.email=document.getElementById("email").value.trim();user.age=Number(document.getElementById("age").value);
+ document.getElementById("output").textContent=JSON.stringify(user,null,2);
+});
+</script></body></html>
