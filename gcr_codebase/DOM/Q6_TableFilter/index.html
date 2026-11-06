@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Table Filter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Student Records</h1>
+    <input id="search" placeholder="Search name or branch">
+    <table>
+      <thead><tr><th>Name</th><th>Branch</th><th>CGPA</th></tr></thead>
+      <tbody id="studentRows">
+        <tr><td>Aarav Sharma</td><td>CSE</td><td>8.7</td></tr>
+        <tr><td>Priya Singh</td><td>ECE</td><td>9.1</td></tr>
+        <tr><td>Rahul Verma</td><td>IT</td><td>7.8</td></tr>
+        <tr><td>Ananya Gupta</td><td>CSE</td><td>8.9</td></tr>
+        <tr><td>Rohan Kumar</td><td>ME</td><td>7.5</td></tr>
+      </tbody>
+    </table>
+    <p id="noResults">No results found</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
